@@ -36,13 +36,13 @@ const generateCard = function (arr) {
     //display info
     let roleInfo;
 
-    if (arr.title === "Manager") {
+    if (arr.getRole() === "Manager") {
         positionIcon = `<i class="fas fa-mug-hot"></i>`
         roleInfo = `Office Number: ${arr.officeNumber}`
-    } else if (arr.title === "Engineer") {
+    } else if (arr.getRole() === "Engineer") {
         positionIcon = `<i class="fas fa-glasses"></i>`
         roleInfo = `GitHub Username: <a href="https://github.com/${arr.github}" target="_blank">${arr.github}</a>`
-    } else if (arr.title === "Intern") {
+    } else if (arr.getRole() === "Intern") {
         positionIcon = `<i class="fas fa-user-graduate"></i>`
         roleInfo = `School: ${arr.school}`
     }
@@ -53,13 +53,13 @@ const generateCard = function (arr) {
     <div class="card shadow-lg mb-5 bg-white rounded">
         <div class="card-header bg-primary">
             <h4 class="text-white text-center">${arr.name}</h4>
-            <h4 class="text-white text-center">${positionIcon}</i> ${arr.title}</h4>
+            <h4 class="text-white text-center">${arr.getRole()}</h4>
         </div>
         <div class="card-body">
             <ul class="list-unstyled">
                 <li>Employee ID: ${arr.id}</li>
                 <li>Email: <a href="mailto:${arr.email}">${arr.email}</a></li>
-                <li>${roleInfo}</i>
+                <li>${roleInfo}</li>
             </u>
         </div>
     </div>
