@@ -19,7 +19,7 @@ console.clear();
 console.log("---------------------------------------------");
 console.log("Team Portfolio Generator by nosremetnarg")
 
-// Main function to run application
+// function to run application
 async function main() {
     try {
         await prompt()
